@@ -1,0 +1,50 @@
+<div class="w-screen h-screen flex justify-between">
+    <div class="w-2/4 h-full py-12 px-20">
+        <div class="flex gap-5 items-center h-[5%]">
+            <img src="../../../assets/login.png" alt="icon-login" class="w-8" />
+            <h1 class="text-sm font-bold">TITLE WEBSITE</h1>
+        </div>
+        <div class="flex items-center h-[90%]">
+            <div class="w-full">
+                <h1 class="text-3xl font-bold pb-10">REGISTER PAGE</h1>
+                <form class="w-full">
+                    <input class="border-2 outline-none border-border text-base py-3 px-5 rounded-full w-full" placeholder="Username" type="Text" autocomplete="off" (input)="handleInputUsername($event)" />
+                    <input class="border-2 outline-none border-border text-base py-3 px-5 rounded-full w-full mt-5" placeholder="Email" type="email" autocomplete="off" (input)="handleInputEmail($event)" />
+                    <div class="flex justify-center gap-5">
+                        <div class="w-2/4 relative">
+                            <input class="border-2 outline-none border-border text-base py-3 px-5 rounded-full w-full my-5" placeholder="Password" type="{{inputType}}" autocomplete="off" (input)="handleInputPassword($event)" />
+                            <i class="fa-solid {{eyeType}} absolute top-[31px] right-4 text-border text-lg cursor-pointer" (click)="handleEyeButton()"></i>
+                        </div>
+                        <div class="w-2/4 relative">
+                            <input class="border-2 outline-none border-border text-base py-3 px-5 rounded-full w-full my-5" placeholder="Confirm Password" type="{{inputType}}" autocomplete="off" (input)="handleInputConfirmPassword($event)" />
+                            <i class="fa-solid {{eyeType}} absolute top-[31px] right-4 text-border text-lg cursor-pointer" (click)="handleEyeButtonConfirm()"></i>
+                        </div>
+                    </div>
+                    <button type="button" class="w-full bg-blue py-3 rounded-full text-base text-white" (click)="loginButton()">
+                        SIGN UP
+                    </button>
+                </form>
+                <div class="w-full flex justify-between items-center my-5">
+                    <div class="border-b-2 border-border w-1/3"></div>
+                    <p class="w-1/3 text-sm text-center text-border font-semibold">Or Sign Up Using</p>
+                    <div class="border-b-2 border-border w-1/3"></div>
+                </div>
+                <a routerLink="#" class="flex gap-5 justify-center items-center border-2 rounded-full border-border py-3">
+                    <img src="../../../assets/google.png" alt="google-icon" class="w-6" />
+                    <p class="text-sm text-border font-semibold">Sign Up With Google</p>
+                </a>
+            </div>
+        </div>
+        <div class="h-[5%] flex items-end justify-center">
+            <p class="text-sm">Have An Account ? <a routerLink="/login" class="text-blue font-bold">Login Now</a></p>
+        </div>
+    </div>
+    <div class="w-2/4 h-full flex justify-center items-center bg-center bg-cover relative" style="background-image: url('../../../assets/background.jpg');">
+        <div>
+            <h1 class="text-center text-4xl pb-8 font-bold text-white tracking-wider">TITLE WEBSITE</h1>
+            <p class="w-2/3 mx-auto text-center text-white text-xl z-50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget lectus non velit finibus eleifend non ac massa. Phasellus eget urna sit amet magna maximus pulvinar. Duis tempor vestibulum tincidunt. Ut mauris quam, sollicitudin sed efficitur at, lobortis et neque. Curabitur in tristique neque.</p>
+        </div>
+        <img class="absolute top-0 left-0" src="../../../assets/extra1.svg" />
+        <img class="absolute bottom-0 right-0" src="../../../assets/extra2.svg" />
+    </div>
+</div>
